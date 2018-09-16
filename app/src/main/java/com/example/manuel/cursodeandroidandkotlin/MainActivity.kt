@@ -19,9 +19,10 @@ class MainActivity : AppCompatActivity(), TextWatcher {
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         name = editName?.text.toString()
-        age = Integer.valueOf(editAge?.text.toString())
-        textName?.text = name
-        textAge?.text = age.toString()
+        age = editAge?.text.toString()
+
+        if (name != "") textName?.text = name
+        if (age != "") textAge?.text = age
 
         //Toast.makeText(this, s.toString(), Toast.LENGTH_SHORT).show()
     }
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity(), TextWatcher {
 
 
     private var name: String? = null
-    private var age = 0
+    private var age: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
