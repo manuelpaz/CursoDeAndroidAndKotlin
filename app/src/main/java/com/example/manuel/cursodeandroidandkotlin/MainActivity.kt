@@ -55,11 +55,33 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
     }
 
     private fun operacion(){
-        name = editName?.text.toString()
+
+        //Las siguientes declaraciones reportan un error por redundancia de declaracion de tipo por lo que se declaran como
+        //se muestra en el código despues del bloque comentado.
+
+        /*
+        var cadena: String = ""
+        var entero: Int = 0
+        var doble: Double = 5.0
+        var valor: Boolean = false
+        var char: Char = 'k'
+        var f: Float = 5.2f
+        */
+
+        //Las siguientes declaraciones hacen que el compilador infiera el tipo de dato de las variables
+
+        var cadena = "" //Dato tipo cadena (String)
+        var entero = 0  //Dato tipo  (Int)
+        var doble = 5.0 //Dato tipo doble (Double)
+        var valor = false //Dato tipo booleano (Boolean)
+        var char = 'k' //Dato tipo caracter (Char)
+        var f = 5.2f //Dato tipo flotante (Float)
+
+        /*name = editName?.text.toString()
         age = editAge?.text.toString()
 
         if (name != "") textName?.text = name
-        if (age != "") textAge?.text = age
+        if (age != "") textAge?.text = age*/
 
     }
 }
