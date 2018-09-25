@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        operacion()
         //editName = findViewById(R.id.editText_Name) as EditText
         editName = findViewById(R.id.editText_Name)
         editAge = findViewById(R.id.editText_Age)
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
         //se muestra en el código despues del bloque comentado.
 
         /*
-        var cadena: String = ""
+        var cadena: String = "magicos"
         var entero: Int = 0
         var doble: Double = 5.0
         var valor: Boolean = false
@@ -70,13 +70,20 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
 
         //Las siguientes declaraciones hacen que el compilador infiera el tipo de dato de las variables
 
-        var cadena = "" //Dato tipo cadena (String)
+        var cadena = "magicos" //Dato tipo cadena (String)
         var entero = 0  //Dato tipo  (Int)
-        var doble = 5.0 //Dato tipo doble (Double)
+        /*var doble = 5.0 //Dato tipo doble (Double)
         var valor = false //Dato tipo booleano (Boolean)
         var char = 'k' //Dato tipo caracter (Char)
-        var f = 5.2f //Dato tipo flotante (Float)
+        var f = 5.2f //Dato tipo flotante (Float)*/
 
+        if(true){
+            entero = 5*5
+        }else{
+            cadena = "no tiene permiso"
+        }
+
+        val d = cadena.length ?: 4
         /*name = editName?.text.toString()
         age = editAge?.text.toString()
 
