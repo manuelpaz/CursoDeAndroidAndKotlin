@@ -56,34 +56,25 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
 
     private fun operacion(){
 
-        //Las siguientes declaraciones reportan un error por redundancia de declaracion de tipo por lo que se declaran como
-        //se muestra en el código despues del bloque comentado.
-
-        /*
-        var cadena: String = "magicos"
-        var entero: Int = 0
-        var doble: Double = 5.0
-        var valor: Boolean = false
-        var char: Char = 'k'
-        var f: Float = 5.2f
-        */
-
-        //Las siguientes declaraciones hacen que el compilador infiera el tipo de dato de las variables
-
-        var cadena = "magicos" //Dato tipo cadena (String)
         var entero = 0  //Dato tipo  (Int)
-        /*var doble = 5.0 //Dato tipo doble (Double)
-        var valor = false //Dato tipo booleano (Boolean)
-        var char = 'k' //Dato tipo caracter (Char)
-        var f = 5.2f //Dato tipo flotante (Float)*/
+        var valor1 = 5
+        var valor2 = 6
 
-        if(true){
-            entero = 5*5
-        }else{
-            cadena = "no tiene permiso"
-        }
+        entero = valor1 + valor2
+        entero = valor1.plus(valor2)
 
-        val d = cadena.length ?: 4
+        entero = valor1 - valor2
+        entero = valor1.minus(valor2)
+
+        entero = valor1 * valor2
+        entero = valor1.times(valor2)
+
+        entero = valor2 / valor1
+        entero = valor2.div(valor1)
+
+        entero = valor2 % valor1
+        entero = valor2.rem(valor1)
+
         /*name = editName?.text.toString()
         age = editAge?.text.toString()
 
