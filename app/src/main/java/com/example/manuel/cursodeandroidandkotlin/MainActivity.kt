@@ -57,23 +57,42 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
     private fun operacion(){
 
         var entero = 0  //Dato tipo  (Int)
-        var valor1 = 5
-        var valor2 = 6
+        var valor1 = 7
+        var valor2 = 3
+        //oerador de Incremento
+        valor1++
 
-        entero = valor1 + valor2
-        entero = valor1.plus(valor2)
 
-        entero = valor1 - valor2
-        entero = valor1.minus(valor2)
+        valor1 = 7
+        //Sobrecarga del operador incremento
+        valor1 = valor1.inc()
 
-        entero = valor1 * valor2
-        entero = valor1.times(valor2)
+        valor1 = 7
+        //oerador de Decremento
+        valor1--
 
-        entero = valor2 / valor1
-        entero = valor2.div(valor1)
+        valor1 = 7
+        //Sobrecarga del operador decremento
+        valor1 = valor1.dec()
 
-        entero = valor2 % valor1
-        entero = valor2.rem(valor1)
+
+        //En las siguientes lineas de codigo se muestran operadores de asignación aumentada
+        valor1 = 7
+        valor2 = 3
+        valor2 += valor1 //Almacena en valor2 la suma de valor2 con valor1
+
+        valor1 = 7
+        valor2 = 3
+        valor2 -= valor1 //Almacena en valor2 la resta de valor2 con valor1
+
+        valor1 = 7
+        valor2 = 3
+        valor2 *= valor1 //Almacena en valor2 la multiplicación de valor2 con valor1
+
+        valor1 = 7
+        valor2 = 3
+        valor1 %= valor2 //Almacena en valor1 el resto de división de valor1 con valor2
+
 
         /*name = editName?.text.toString()
         age = editAge?.text.toString()
