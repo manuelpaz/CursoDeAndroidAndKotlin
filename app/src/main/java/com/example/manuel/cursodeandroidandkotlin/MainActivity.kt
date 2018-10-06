@@ -59,40 +59,90 @@ class MainActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
         var entero = 0  //Dato tipo  (Int)
         var valor1 = 7
         var valor2 = 3
-        //oerador de Incremento
-        valor1++
+        var valor3 = false
 
+        // Operador de negación ! hace que se niegue la variable valor3 que tiene un valor de false haciendola
+        // true y permitiendo realizar la operación dentro del if
+        if(!valor3){
+            valor1 %= valor2
+        }
+         //Se reasigna valores a la variables
+        valor1 = 7
+        valor3 = true
+
+        // Operador de negación ! hace que se niegue la variable valor3 que tiene un valor de true haciendola
+        // false no permitiendo realizar la operación dentro del if
+        if(!valor3){
+            valor1 %= valor2
+        }
 
         valor1 = 7
-        //Sobrecarga del operador incremento
-        valor1 = valor1.inc()
+        valor3 = false
 
-        valor1 = 7
-        //oerador de Decremento
-        valor1--
-
-        valor1 = 7
-        //Sobrecarga del operador decremento
-        valor1 = valor1.dec()
+        // Sobrecarga de operador de negación hace que se niegue la variable valor3 que tiene un valor de false
+        // haciendola true permitiendo realizar la operación dentro del if
+        if(valor3.not()){
+            valor1 %= valor2
+        }
 
 
-        //En las siguientes lineas de codigo se muestran operadores de asignación aumentada
+        // Operadores de igualdad y desigualdad
+        // Operador de igualdad
+
+        valor3 = valor1 == valor2 // Es el operador de igualdad tradicional
         valor1 = 7
         valor2 = 3
-        valor2 += valor1 //Almacena en valor2 la suma de valor2 con valor1
+        valor3 = false
+
+        //Sobrecarga del operador de igualdad
+        valor3 = valor1?.equals(valor2) ?: (valor2==null) //Se evalua false al no ser iguales
+        // valor1 y valor2 y se asigna a valor3
 
         valor1 = 7
-        valor2 = 3
-        valor2 -= valor1 //Almacena en valor2 la resta de valor2 con valor1
+        valor2 = 7
+        valor3 = false
+        valor3 = valor1?.equals(valor2) ?: (valor2==null) //Se evalua true al ser iguales
+        // valor1 y valor2  y se asigna a valor3
 
+        // El código del siguiente bloque comentado provoca un error ya que se esta comparando
+        // un dato de tipo string con un dato de tipo enetero
+       /*
+            var valor4 = null
+            valor2 = 7
+            valor3 = false
+            valor3 = valor4?.equals(valor2) ?: (valor2==null)
+       */
+
+        var valor4 = null
+        var valor5 = "Manuel"
+        valor3 = false
+        valor3 = valor4?.equals(valor5) ?: (valor5==null) //Se evalua false al no ser iguales
+        // valor4 y valor5 y se asigna a valor3
+
+
+        //Operador de desigualdad
+
+        //valor4 != valor5 operador de desigualdad tradicional
+
+        valor3 = valor4!=valor5//Se evalua true al ser diferentes valor4 y valor5 y se almacena en valor3
+
+        valor3 = false
         valor1 = 7
-        valor2 = 3
-        valor2 *= valor1 //Almacena en valor2 la multiplicación de valor2 con valor1
+        valor5 = "Manuel"
 
-        valor1 = 7
-        valor2 = 3
-        valor1 %= valor2 //Almacena en valor1 el resto de división de valor1 con valor2
+        //Sobrecarga del operador desigualdad
 
+        valor3 = !(valor1?.equals(valor5) ?: (valor5==null)) // Se evalua true al ser distintos
+        // valor1 y valor5 y se asigna a valor3
+
+        var valor6 = null
+        valor3 = !(valor6?.equals(valor5) ?: (valor5 ==null)) // Se evalua true al ser distintos
+        // valor6 y valor5 y se asigna a valor3
+
+
+        var valor8 = "Manuel"
+        valor3 = !(valor8?.equals(valor5) ?: (valor5 ==null)) // Se evalua false al no ser distinos
+        // valor8 y valor5
 
         /*name = editName?.text.toString()
         age = editAge?.text.toString()
